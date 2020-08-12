@@ -88,7 +88,20 @@ def weather_condition(temperature):
         return "Cold"
 
 #input freeze the execution of a program and wait for user input
-temperature = float(input("Enter Temperature:"))
+temperature = float(input("Enter Temperature: "))
 #by default python define any input argument as a string
 
 print(weather_condition(temperature))
+
+#Program to output "hello" + your name
+
+name = input("Enter your name:  ")
+#The value of "name" will go and replace the %s
+message = "hello %s!" % name
+# for multiples arguments
+surname = input("Enter your surname: ")
+message = "hello %s %s !" % (name, surname)
+
+#This method work only beyond python 3.6
+message = f"hello {name} {surname}!"
+print(message)
