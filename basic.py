@@ -12,7 +12,7 @@ y = '10'
 z = 10.1
  
 # List datastructure
-monday_temperature = [9.1,8.8,7.5]
+monday_temperature = [9.1,8.8,9.9]
 
 #Dictionary Datastructure
 student_grades = {"Mary": 9.1, "Six": 8.8, "John": 7.5}
@@ -55,12 +55,27 @@ print(type(x), type(y), type(z))
 print(student_grades["Six"]) #8.8
 
 #Creating your own functions
-def mean(mylist):
-    the_mean = sum(mylist) / len(mylist)
-    return the_mean
+# def mean(mylist):
+#     the_mean = sum(mylist) / len(mylist)
+#     return the_mean
 
-mean_result = mean([1,4,7])
-print(mean_result)
+# mean_result = mean([1,4,7])
+# print(mean_result)
 
 #When your function doesn't have a return it's implicitely return a "None" object. which means nothing
 # You should always have a return in your function
+
+# If conditional example
+def mean(value):
+    if isinstance(value, dict): # or type(value) == dict: 
+        the_mean = sum(value.values()) / len(value)
+    elif isinstance(value, list):
+        the_mean = sum(value) / len(value)
+    else:
+        the_mean = value
+    return the_mean
+
+print(mean(student_grades)) 
+print(mean(monday_temperature)) 
+
+# after a colum you always have inentation
