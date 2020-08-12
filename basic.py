@@ -79,3 +79,16 @@ print(mean(student_grades))
 print(mean(monday_temperature)) 
 
 # after a colum you always have inentation
+
+#User Input
+def weather_condition(temperature):
+    if temperature > 7:
+        return "Warm"
+    else:
+        return "Cold"
+
+#input freeze the execution of a program and wait for user input
+temperature = float(input("Enter Temperature:"))
+#by default python define any input argument as a string
+
+print(weather_condition(temperature))
