@@ -1,2 +1,4 @@
 # python-10Apps
-Learning Python by building 10 Apps
+Pratical Learning of Python by building 10 Apps
+
+
